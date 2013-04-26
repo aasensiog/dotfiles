@@ -17,5 +17,10 @@
 	mergedev = "! git dev; git checkout -; git merge develop"
 	hardening = "! f() { git dev; git co -b hardening/$1; git push origin hardening/$1; }; f"
 	delbranch = "! f() { git dev; git br -d $1; git push origin :$1; }; f"
+
+	discard = checkout -- .
 [push]
 	default = current
+
+[core]
+	autocrlf = false
